@@ -1,0 +1,3 @@
+1、如果cookie中有 rememberMe=xx 的字段，这个字段是rememberMeManager默认的，直接看响应头部是否有 Set-Cookie: rememberMe=deleteMe; 来判断是否为shiro框架：
+2、如果无 rememberMe=xx字段，可以在 cookie 追加一个 rememberMe=xx 的字段，然后看响应头部是否有 Set-Cookie: rememberMe=deleteMe;
+3、实际上这个默认字段的命名是可以修改的，Shiro支持在rememberMe管理中自定义名称，所以可以将rememberMe=xx替换成rememberher=xx、rememberyou=xx等。
